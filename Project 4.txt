@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class TextAdventureGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Start the game
+        System.out.println("Welcome to the Text Adventure Game!");
+        System.out.println("Let's begin...");
+
+        // Game loop
+        boolean gameOver = false;
+        while (!gameOver) {
+            // Display current situation and options
+            displaySituation();
+            displayOptions();
+
+            // Get user input
+            String userInput = scanner.nextLine();
+
+            // Process user input
+            switch (userInput.toLowerCase()) {
+                case "1":
+                    // Handle option 1
+                    handleOption1();
+                    break;
+                case "2":
+                    // Handle option 2
+                    handleOption2();
+                    break;
+                case "3":
+                    // Handle option 3
+                    handleOption3();
+                    break;
+                default:
+                    System.out.println("Invalid input. Please enter a valid option.");
+                    break;
+            }
+
+            // Check for game over condition
+            gameOver = checkGameOver();
+        }
+
+        // End of the game
+        System.out.println("Game over. Thanks for playing!");
+        scanner.close();
+    }
+
+    // Define the storyline and situation
+    private static void displaySituation() {
+        // Display current situation based on the story
+        System.out.println("You find yourself in a dark forest...");
+    }
+
+    // Display options for the user to choose
+    private static void displayOptions() {
+        // Display options for the user to choose
+        System.out.println("What do you want to do?");
+        System.out.println("1. Explore further into the forest.");
+        System.out.println("2. Rest for a while under a tree.");
+        System.out.println("3. Attempt to find a way out of the forest.");
+    }
+
+    // Handle user choosing option 1
+    private static void handleOption1() {
+        // Implement the outcome for option 1
+        System.out.println("You decide to explore further into the forest...");
+    }
+
+    // Handle user choosing option 2
+    private static void handleOption2() {
+        // Implement the outcome for option 2
+        System.out.println("You decide to rest for a while under a tree...");
+    }
+
+    // Handle user choosing option 3
+    private static void handleOption3() {
+        // Implement the outcome for option 3
+        System.out.println("You attempt to find a way out of the forest...");
+    }
+
+    // Check for game over condition
+    private static boolean checkGameOver() {
+        // Implement conditions for game over
+        return false; // Change this based on the game logic
+    }
+}
